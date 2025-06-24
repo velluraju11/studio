@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { WhoWeServe } from '@/components/sections/who-we-serve';
 import { CoreValues } from '@/components/sections/core-values';
 import { OurMission } from '@/components/sections/mission';
+import { Founder } from '@/components/sections/founder';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Products />
         <WhoWeServe />
         <CoreValues />
+        <Founder />
       </main>
       <Footer />
     </div>

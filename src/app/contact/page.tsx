@@ -47,8 +47,8 @@ export default function ContactPage() {
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
-                                <div className="space-y-6 text-center sm:text-left">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                                <div className="md:col-span-2 space-y-6 text-center md:text-left">
                                     <div className="space-y-2">
                                         <p className="text-sm font-semibold text-muted-foreground">Email</p>
                                         <a href="mailto:velluraju11@gmail.com" className="text-lg text-primary hover:underline block truncate">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm font-semibold text-muted-foreground">Follow</p>
-                                        <div className="mt-2 flex gap-4 justify-center sm:justify-start">
+                                        <div className="mt-2 flex gap-4 justify-center md:justify-start">
                                             <Button asChild variant="outline" size="icon">
                                                 <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                                     <Instagram className="h-5 w-5" />
@@ -76,7 +76,7 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-center flex-shrink-0">
+                                <div className="text-center">
                                     <Image
                                         src="https://placehold.co/128x128.png"
                                         alt="Velluraju C"

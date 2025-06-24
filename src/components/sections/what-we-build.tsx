@@ -14,7 +14,7 @@ const features = [
 
 export function WhatWeBuild() {
   return (
-    <AnimatedSection id="what-we-build" className="bg-card/50">
+    <AnimatedSection id="what-we-build" className="bg-card/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div className="space-y-4">
@@ -23,7 +23,7 @@ export function WhatWeBuild() {
                     Ryha creates AI-native, autonomous digital ecosystems. This is not traditional software. These are AI-native ecosystems that think, work, and evolve — like a human.
                  </p>
             </div>
-            <Card className="hologram-effect">
+            <Card className="border-primary/30 bg-card/50">
                 <CardContent className="p-8">
                     <ul className="space-y-4">
                         {features.map((feature, index) => (

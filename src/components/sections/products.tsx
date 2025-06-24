@@ -25,16 +25,16 @@ const products = [
 
 export function Products() {
   return (
-    <AnimatedSection id="products">
+    <AnimatedSection id="products" className="bg-card/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent text-glow-accent sm:text-4xl md:text-5xl">Flagship Products Powering the Ryha Movement</h2>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {products.map((product, index) => (
-            <Card key={index} className="hologram-effect flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50">
+            <Card key={index} className="bg-card/50 flex flex-col text-center transition-all duration-300 border border-transparent hover:border-primary/80 hover:bg-card hover:-translate-y-2">
               <CardHeader className="items-center">
-                <div className="rounded-full bg-primary/20 p-4 box-glow-primary">
+                <div className="rounded-full bg-primary/10 p-4 box-glow-primary">
                   <product.icon className="h-10 w-10 text-primary" />
                 </div>
                 <CardTitle className="font-headline mt-4 text-xl">{product.title}</CardTitle>

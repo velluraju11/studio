@@ -13,7 +13,7 @@ export function Founder() {
                 alt="Velluraju C, Founder of Ryha"
                 width={400}
                 height={400}
-                className="rounded-lg object-cover border-2 border-primary/50 shadow-lg shadow-primary/20"
+                className="rounded-lg object-cover border-2 border-primary/50 shadow-lg shadow-primary/20 box-glow-primary"
                 data-ai-hint="founder portrait"
               />
             </div>

@@ -15,7 +15,7 @@ export function WhoWeServe() {
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-3 md:gap-4">
           {sectors.map((sector, index) => (
-            <Badge key={index} variant="outline" className="text-md border-accent/50 text-accent/80 py-2 px-4 transition-all hover:bg-accent/20 hover:text-accent hover:border-accent">
+            <Badge key={index} variant="outline" className="text-md border-primary/50 text-primary/80 py-2 px-4 transition-all hover:bg-primary/20 hover:text-primary hover:border-primary">
               {sector}
             </Badge>
           ))}

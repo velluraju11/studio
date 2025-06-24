@@ -22,9 +22,9 @@ export function CoreValues() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {values.map((value, index) => (
-            <Card key={index} className="hologram-effect text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50">
+            <Card key={index} className="bg-card/50 text-center transition-all duration-300 border border-transparent hover:border-primary/80 hover:bg-card hover:-translate-y-2">
               <CardHeader className="items-center">
-                <div className="rounded-full bg-primary/20 p-3 box-glow-primary">
+                <div className="rounded-full bg-primary/10 p-3 box-glow-primary">
                   <value.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline mt-4 text-lg">{value.title}</CardTitle>

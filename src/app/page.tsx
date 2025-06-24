@@ -1,6 +1,5 @@
 import { Header } from '@/components/layout/header';
 import { Hero } from '@/components/sections/hero';
-import { Products } from '@/components/sections/products';
 import { WhatWeBuild } from '@/components/sections/what-we-build';
 import { Footer } from '@/components/layout/footer';
 import { WhoWeServe } from '@/components/sections/who-we-serve';
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <OurMission />
         <WhatWeBuild />
-        <Products />
         <WhoWeServe />
         <CoreValues />
         <Founder />

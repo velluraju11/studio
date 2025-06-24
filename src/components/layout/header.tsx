@@ -14,7 +14,7 @@ export function Header() {
         <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-6 text-sm font-medium md:flex">
             <Link href="/" className="hover:text-primary transition-colors" prefetch={false}>Home</Link>
             <Link href="/mission" className="hover:text-primary transition-colors" prefetch={false}>Mission</Link>
-            <Link href="/#products" className="hover:text-primary transition-colors" prefetch={false}>Products</Link>
+            <Link href="/products" className="hover:text-primary transition-colors" prefetch={false}>Products</Link>
             <Link href="/blog" className="hover:text-primary transition-colors" prefetch={false}>Blog</Link>
             <Link href="/about" className="hover:text-primary transition-colors" prefetch={false}>About</Link>
             <Link href="/contact" className="hover:text-primary transition-colors" prefetch={false}>Contact</Link>

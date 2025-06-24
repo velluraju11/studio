@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
@@ -43,25 +44,30 @@ export default function ContactPage() {
                     <Card className="hologram-effect">
                         <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
-                            <CardDescription>Get in touch with us directly.</CardDescription>
+                            <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
-                        <CardContent className="pt-6">
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-4">
-                                    <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
-                                    <a href="mailto:velluraju11@gmail.com" className="truncate text-foreground hover:text-primary">
-                                        velluraju11@gmail.com
-                                    </a>
+                        <CardContent className="p-6 pt-0">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                                <div className="md:col-span-2 space-y-6">
+                                    <div className="flex items-center gap-4">
+                                        <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
+                                        <a href="mailto:velluraju11@gmail.com" className="truncate text-foreground hover:text-primary">
+                                            velluraju11@gmail.com
+                                        </a>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
+                                        <a href="tel:+919488925913" className="text-foreground hover:text-primary">
+                                            +91 9488925913
+                                        </a>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <MapPin className="h-5 w-5 flex-shrink-0 text-primary" />
+                                        <span className="text-foreground">Tirunelveli, Tamil Nadu, India</span>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                    <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
-                                    <a href="tel:+919488925913" className="text-foreground hover:text-primary">
-                                        +91 9488925913
-                                    </a>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <MapPin className="h-5 w-5 flex-shrink-0 text-primary" />
-                                    <span className="text-foreground">Tirunelveli, Tamil Nadu, India</span>
+                                <div className="flex items-start justify-center md:justify-end">
+                                    <div className="w-32 h-32 rounded-lg bg-muted border border-border" data-ai-hint="profile picture"></div>
                                 </div>
                             </div>
                             <div className="my-6 border-t border-border"></div>

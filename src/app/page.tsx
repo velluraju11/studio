@@ -6,6 +6,7 @@ import { Founder } from '@/components/sections/founder';
 import { Footer } from '@/components/layout/footer';
 import { WhoWeServe } from '@/components/sections/who-we-serve';
 import { CoreValues } from '@/components/sections/core-values';
+import { OurMission } from '@/components/sections/mission';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <OurMission />
         <WhatWeBuild />
         <Products />
         <WhoWeServe />

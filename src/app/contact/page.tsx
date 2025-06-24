@@ -1,3 +1,4 @@
+"use client";
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -11,6 +12,16 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 export default function ContactPage() {
   return (
@@ -40,15 +51,15 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-6xl space-y-12">
+                <div className="mx-auto max-w-lg space-y-12">
                     <Card className="hologram-effect">
-                        <CardHeader className="px-4 pt-6 pb-4 md:px-6">
+                        <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
-                        <CardContent className="px-4 pb-6 md:px-6">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6 items-center">
-                                <div className="md:col-span-2 space-y-6">
+                        <CardContent>
+                            <div className="grid grid-cols-[1fr,auto] items-center gap-8">
+                                <div className="space-y-4">
                                     <div className="flex items-center gap-4">
                                         <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
                                         <a href="mailto:velluraju11@gmail.com" className="truncate text-foreground hover:text-primary">
@@ -66,16 +77,14 @@ export default function ContactPage() {
                                         <span className="text-foreground">Tirunelveli, Tamil Nadu, India</span>
                                     </div>
                                 </div>
-                                <div className="flex items-center justify-center md:justify-end">
-                                    <div className="w-36 h-36 rounded-lg bg-muted border border-border" data-ai-hint="profile picture"></div>
-                                </div>
+                                <div className="h-32 w-32 rounded-lg bg-muted border border-border" data-ai-hint="profile picture"></div>
                             </div>
                             <div className="my-6 border-t border-border"></div>
-                            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-                                <div>
+                            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+                                <div className="flex-1">
                                     <p className="font-semibold text-foreground">Velluraju C, <span className="font-normal text-muted-foreground">Founder of Ryha</span></p>
                                 </div>
-                                <div className="flex gap-4">
+                                <div className="flex gap-2">
                                     <Button asChild variant="outline" size="icon">
                                         <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                             <Instagram className="h-5 w-5" />
@@ -143,9 +152,32 @@ export default function ContactPage() {
                             <p className="text-muted-foreground mb-4">
                                 Ryha is a self-funded project driven by passion. Your support allows us to continue our work and push the boundaries of technology.
                             </p>
-                            <Button asChild className="w-full">
-                                <Link href="#">Donate Now</Link>
-                            </Button>
+                             <AlertDialog>
+                                <AlertDialogTrigger asChild>
+                                    <Button className="w-full">Donate Now</Button>
+                                </AlertDialogTrigger>
+                                <AlertDialogContent>
+                                    <AlertDialogHeader>
+                                        <AlertDialogTitle>Support Ryha's Mission</AlertDialogTitle>
+                                        <AlertDialogDescription>
+                                            Scan the QR code with your UPI app to donate. Your support is invaluable.
+                                        </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <div className="flex flex-col items-center justify-center gap-4 py-4">
+                                        <div className="w-48 h-48 rounded-lg bg-white p-2">
+                                            <Image src="https://placehold.co/256x256.png" alt="UPI QR Code" width={192} height={192} data-ai-hint="QR code" />
+                                        </div>
+                                        <p className="text-center font-mono text-sm text-muted-foreground">
+                                            Or use UPI ID:
+                                            <br />
+                                            <span className="font-bold text-foreground">your-upi-id@okhdfcbank</span>
+                                        </p>
+                                    </div>
+                                    <AlertDialogFooter>
+                                        <AlertDialogCancel>Close</AlertDialogCancel>
+                                    </AlertDialogFooter>
+                                </AlertDialogContent>
+                            </AlertDialog>
                         </CardContent>
                     </Card>
                 </div>

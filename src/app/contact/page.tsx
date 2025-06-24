@@ -41,34 +41,45 @@ export default function ContactPage() {
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="mx-auto max-w-2xl space-y-12">
-                    <Card className="hologram-effect">
-                        <CardHeader>
-                            <CardTitle>Contact Information</CardTitle>
-                            <CardDescription>You can also reach out to us directly.</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                           <div className="flex flex-col sm:flex-row items-center gap-8">
-                                <div className="flex-1 space-y-4">
+                    <div className="p-0.5 rounded-2xl bg-gradient-to-br from-primary via-purple-600 to-pink-600 max-w-sm mx-auto shadow-lg shadow-primary/20">
+                        <div className="relative bg-background rounded-[15px] aspect-[9/16] overflow-hidden">
+                            <Image
+                                src="https://placehold.co/450x800.png"
+                                alt="Velluraju C"
+                                fill
+                                className="absolute inset-0 w-full h-full object-cover grayscale opacity-25"
+                                data-ai-hint="founder portrait professional"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+
+                            <div className="relative z-10 flex flex-col h-full p-6 text-white text-center">
+                                
+                                <div className="my-auto">
+                                    <h3 className="font-headline text-4xl font-bold tracking-tight">Velluraju C</h3>
+                                    <p className="text-lg text-white/80 mt-1">Founder of Ryha</p>
+                                </div>
+                                
+                                <div className="space-y-6 bg-black/40 backdrop-blur-md p-6 rounded-lg border border-white/10">
                                     <div>
-                                        <p className="text-lg font-semibold text-foreground">Email</p>
-                                        <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
+                                        <p className="text-xs font-semibold uppercase tracking-wider text-white/70">Email</p>
+                                        <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline text-lg">
                                             velluraju11@gmail.com
                                         </a>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
-                                        <div className="mt-2 flex gap-4">
-                                            <Button asChild variant="outline" size="icon">
+                                        <p className="text-xs font-semibold uppercase tracking-wider text-white/70">Follow</p>
+                                        <div className="mt-2 flex justify-center gap-4">
+                                            <Button asChild variant="outline" size="icon" className="bg-transparent text-white border-white/20 hover:bg-white/10 rounded-full">
                                                 <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                                     <Instagram className="h-5 w-5" />
                                                 </Link>
                                             </Button>
-                                            <Button asChild variant="outline" size="icon">
+                                            <Button asChild variant="outline" size="icon" className="bg-transparent text-white border-white/20 hover:bg-white/10 rounded-full">
                                                 <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                                     <Linkedin className="h-5 w-5" />
                                                 </Link>
                                             </Button>
-                                            <Button asChild variant="outline" size="icon">
+                                            <Button asChild variant="outline" size="icon" className="bg-transparent text-white border-white/20 hover:bg-white/10 rounded-full">
                                                 <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                                     <Youtube className="h-5 w-5" />
                                                 </Link>
@@ -76,21 +87,9 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex-shrink-0 text-center">
-                                    <Image
-                                        src="https://placehold.co/120x120.png"
-                                        alt="Velluraju C"
-                                        width={120}
-                                        height={120}
-                                        className="rounded-full mx-auto border-2 border-primary/30"
-                                        data-ai-hint="founder portrait"
-                                    />
-                                    <p className="mt-4 text-lg font-bold text-foreground">Velluraju C</p>
-                                    <p className="text-sm text-muted-foreground">Founder of Ryha</p>
-                                </div>
                             </div>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </div>
 
                     <Card className="hologram-effect">
                         <CardHeader>

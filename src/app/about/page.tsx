@@ -12,13 +12,17 @@ import {
   User,
   Zap,
   Bot,
-  Atom
+  Atom,
+  Instagram,
+  Linkedin
 } from 'lucide-react';
+import Link from 'next/link';
 import { AnimatedSection } from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Glow } from '@/components/ui/glow';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { Button } from '@/components/ui/button';
 
 const howIWork = [
   {
@@ -87,6 +91,18 @@ export default function AboutPage() {
               <p className="mt-6 text-lg text-muted-foreground md:text-xl">
                 Founder & Visionary Architect of Ryha, the World's First AI-Native Cyberwarfare Ecosystem. I’m not just building software — I’m engineering an AI-driven revolution. As the World’s No. 1 Hacker Aspirant, I live to break barriers — in code, systems, and thinking. I lead the development of Ryha, a next-generation operating system and AI framework that fuses cybersecurity, automation, and intelligence into a single unified force.
               </p>
+              <div className="mt-8 flex justify-center gap-4">
+                <Button asChild variant="outline" size="icon">
+                  <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <Instagram className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <Linkedin className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </AnimatedSection>

@@ -2,7 +2,7 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Mail, Heart, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Heart, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -100,6 +100,11 @@ export default function ContactPage() {
                                             <Button asChild variant="outline" size="icon">
                                                 <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                                     <Linkedin className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                                    <Youtube className="h-5 w-5" />
                                                 </Link>
                                             </Button>
                                         </div>

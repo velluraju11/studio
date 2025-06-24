@@ -2,13 +2,14 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Mail } from 'lucide-react';
+import { Mail, Heart } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
@@ -38,38 +39,77 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <Card className="max-w-2xl mx-auto hologram-effect">
-                    <CardHeader>
-                        <CardTitle>Send us a message</CardTitle>
-                        <CardDescription>We'll get back to you as soon as possible.</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <Label htmlFor="name">Name</Label>
-                                    <Input id="name" placeholder="Enter your name" />
+                <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-start">
+                    <Card className="hologram-effect">
+                        <CardHeader>
+                            <CardTitle>Send us a message</CardTitle>
+                            <CardDescription>This will open your default email client.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <form 
+                                action="mailto:velluraju11@gmail.com" 
+                                method="post" 
+                                encType="text/plain"
+                                className="space-y-6"
+                            >
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="name">Name</Label>
+                                        <Input id="name" name="name" placeholder="Enter your name" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="email">Your Email</Label>
+                                        <Input id="email" name="email" type="email" placeholder="Enter your email" />
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <Label htmlFor="email">Email</Label>
-                                    <Input id="email" type="email" placeholder="Enter your email" />
+                                    <Label htmlFor="subject">Subject</Label>
+                                    <Input id="subject" name="subject" placeholder="What's this about?" />
                                 </div>
-                            </div>
-                            <div className="space-y-2">
-                                <Label htmlFor="subject">Subject</Label>
-                                <Input id="subject" placeholder="What's this about?" />
-                            </div>
-                            <div className="space-y-2">
-                                <Label htmlFor="message">Message</Label>
-                                <Textarea id="message" placeholder="Your message..." rows={5} />
-                            </div>
-                            <Button type="submit" className="w-full">Send Message</Button>
-                        </form>
-                    </CardContent>
-                </Card>
+                                <div className="space-y-2">
+                                    <Label htmlFor="message">Message</Label>
+                                    <Textarea id="message" name="message" placeholder="Your message..." rows={5} />
+                                </div>
+                                <Button type="submit" className="w-full">Send Message</Button>
+                            </form>
+                        </CardContent>
+                    </Card>
+
+                    <div className="space-y-8">
+                        <Card className="hologram-effect">
+                            <CardHeader>
+                                <CardTitle>Contact Information</CardTitle>
+                                <CardDescription>You can also reach out to us directly.</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-lg font-semibold text-foreground">Email</p>
+                                <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
+                                    velluraju11@gmail.com
+                                </a>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="hologram-effect">
+                            <CardHeader className="flex flex-row items-center gap-4">
+                                <Heart className="h-8 w-8 text-primary" />
+                                <div className="flex-1">
+                                    <CardTitle>Support Our Mission</CardTitle>
+                                    <CardDescription>Your contribution helps us build the future.</CardDescription>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground mb-4">
+                                    Ryha is a self-funded project driven by passion. Your support allows us to continue our work and push the boundaries of technology.
+                                </p>
+                                <Button asChild className="w-full">
+                                    <Link href="#">Donate Now</Link>
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
             </div>
         </AnimatedSection>
-
       </main>
       <Footer />
     </div>

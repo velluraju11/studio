@@ -78,21 +78,6 @@ export function Founder() {
               response — it’s my code, my design, my battle. Built with
               obsession, late nights, and raw determination.
             </p>
-            <p>
-              Ryha isn’t just a startup. It’s my rebellion — against
-              surveillance, against complexity, against control. It’s the future
-              I want to live in — where machines serve, not spy… where
-              technology feels like magic you own.
-            </p>
-            <p>
-              This is just the beginning. I’m Velluraju C — and Ryha is my
-              digital revolution. You’ll see what’s coming next.
-            </p>
-            <blockquote className="border-l-2 border-primary/50 pl-6 text-xl text-foreground/90">
-              “I didn’t just want to build an OS, an AI, or a tool. I wanted to
-              build a world — where humans and machines thrive together. And
-              that’s what Ryha is.”
-            </blockquote>
           </div>
         </div>
       </div>

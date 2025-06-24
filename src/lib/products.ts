@@ -16,8 +16,8 @@ export const products: Product[] = [
     slug: "ryha-os",
     icon: Cpu,
     title: "Ryha OS — The World’s Smartest Operating System",
-    image: "https://images.unsplash.com/photo-1713989765634-5d357b49303c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvcGVyYXRpbmclMjBzeXN0ZW0lMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzUwNzg3NzQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    aiHint: "operating system interface",
+    image: "https://images.unsplash.com/photo-1620712943543-959636a39414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2xkJTIwY2lyY3VpdCUyMGJsYWNrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NTE1MTQ0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    aiHint: "gold circuit",
     status: "Under Development",
     features: [
       "AI-assisted & voice-controlled OS.",

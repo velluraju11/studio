@@ -40,14 +40,14 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-2xl space-y-12">
+                <div className="mx-auto max-w-3xl space-y-8">
                     <Card className="hologram-effect">
                         <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
                                 <div className="md:col-span-2 space-y-6 text-center md:text-left">
                                     <div className="space-y-2">
                                         <p className="text-sm font-semibold text-muted-foreground">Email</p>

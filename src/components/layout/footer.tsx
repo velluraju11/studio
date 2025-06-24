@@ -13,6 +13,7 @@ export function Footer() {
         </Link>
         <p className="text-sm">© {new Date().getFullYear()} Ryha. All rights reserved.</p>
         <nav className="flex items-center gap-4 text-sm">
+            <Link href="/" className="hover:text-primary transition-colors" prefetch={false}>Home</Link>
             <Link href="/mission" className="hover:text-primary transition-colors" prefetch={false}>Mission</Link>
             <Link href="/#products" className="hover:text-primary transition-colors" prefetch={false}>Products</Link>
             <Link href="/blog" className="hover:text-primary transition-colors" prefetch={false}>Blog</Link>

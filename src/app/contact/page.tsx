@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
@@ -46,32 +47,46 @@ export default function ContactPage() {
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="space-y-4">
-                                <div>
-                                    <p className="text-lg font-semibold text-foreground">Email</p>
-                                    <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
-                                        velluraju11@gmail.com
-                                    </a>
-                                </div>
-                                <div>
-                                    <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
-                                    <div className="mt-2 flex gap-4">
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                                <Instagram className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                                <Linkedin className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                                <Youtube className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
+                           <div className="flex flex-col sm:flex-row gap-8 items-center">
+                                <div className="flex-1 space-y-4">
+                                    <div>
+                                        <p className="text-lg font-semibold text-foreground">Email</p>
+                                        <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
+                                            velluraju11@gmail.com
+                                        </a>
                                     </div>
+                                    <div>
+                                        <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
+                                        <div className="mt-2 flex gap-4">
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                                    <Instagram className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                                    <Linkedin className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                                    <Youtube className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex-shrink-0 text-center">
+                                    <Image
+                                        src="https://placehold.co/120x120.png"
+                                        alt="Velluraju C"
+                                        width={120}
+                                        height={120}
+                                        className="rounded-full mx-auto border-2 border-primary/30"
+                                        data-ai-hint="founder portrait"
+                                    />
+                                    <p className="mt-4 text-lg font-bold text-foreground">Velluraju C</p>
+                                    <p className="text-sm text-muted-foreground">Founder of Ryha</p>
                                 </div>
                             </div>
                         </CardContent>

@@ -12,7 +12,7 @@ export default function BlogPage() {
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <AnimatedSection as="div" className="relative overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20 text-center">
+        <AnimatedSection as="div" className="relative overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12 text-center">
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-20 hero-grid-bg"
@@ -32,8 +32,8 @@ export default function BlogPage() {
                 </div>
             </div>
         </AnimatedSection>
-        <AnimatedSection>
-            <div className="container mx-auto px-4 md:px-6 py-12">
+        <AnimatedSection className="py-12 md:py-16">
+            <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold">Welcome to Our Official Blog</h2>
                     <p className="text-muted-foreground mt-4 max-w-xl mx-auto">

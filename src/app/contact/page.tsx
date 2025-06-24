@@ -39,53 +39,52 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-4xl space-y-8">
+                <div className="mx-auto max-w-6xl space-y-12">
                     <Card className="hologram-effect">
                         <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
-                            <CardDescription>You can also reach out to us directly.</CardDescription>
+                            <CardDescription>Get in touch with us directly.</CardDescription>
                         </CardHeader>
-                        <CardContent className="space-y-6 pt-6">
-                            <div className="space-y-2">
-                                <Label className="text-muted-foreground">Email</Label>
-                                <a href="mailto:velluraju11@gmail.com" className="text-lg font-medium text-primary hover:underline block truncate">
-                                    velluraju11@gmail.com
-                                </a>
-                            </div>
-                            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-6 sm:gap-4">
-                                <div>
-                                    <Label className="text-muted-foreground">Follow</Label>
-                                    <div className="mt-2 flex gap-4">
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                                <Instagram className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                                <Linkedin className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
-                                        <Button asChild variant="outline" size="icon">
-                                            <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                                <Youtube className="h-5 w-5" />
-                                            </Link>
-                                        </Button>
-                                    </div>
+                        <CardContent className="pt-6">
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
+                                    <a href="mailto:velluraju11@gmail.com" className="truncate text-foreground hover:text-primary">
+                                        velluraju11@gmail.com
+                                    </a>
                                 </div>
-                                <div className="sm:text-right">
-                                    <p className="font-semibold text-lg text-foreground">Velluraju C</p>
-                                    <p className="text-muted-foreground">Founder of Ryha</p>
-                                    <div className="mt-4 space-y-2 text-sm">
-                                        <div className="flex items-center justify-end gap-2 text-muted-foreground">
-                                            <MapPin className="h-4 w-4 flex-shrink-0" />
-                                            <span>Tirunelveli, Tamil Nadu, India</span>
-                                        </div>
-                                        <div className="flex items-center justify-end gap-2 text-muted-foreground">
-                                            <Phone className="h-4 w-4 flex-shrink-0" />
-                                            <a href="tel:+919488925913" className="hover:text-primary">+91 9488925913</a>
-                                        </div>
-                                    </div>
+                                <div className="flex items-center gap-4">
+                                    <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
+                                    <a href="tel:+919488925913" className="text-foreground hover:text-primary">
+                                        +91 9488925913
+                                    </a>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <MapPin className="h-5 w-5 flex-shrink-0 text-primary" />
+                                    <span className="text-foreground">Tirunelveli, Tamil Nadu, India</span>
+                                </div>
+                            </div>
+                            <div className="my-6 border-t border-border"></div>
+                            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+                                <div>
+                                    <p className="font-semibold text-foreground">Velluraju C, <span className="font-normal text-muted-foreground">Founder of Ryha</span></p>
+                                </div>
+                                <div className="flex gap-4">
+                                    <Button asChild variant="outline" size="icon">
+                                        <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                            <Instagram className="h-5 w-5" />
+                                        </Link>
+                                    </Button>
+                                    <Button asChild variant="outline" size="icon">
+                                        <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                            <Linkedin className="h-5 w-5" />
+                                        </Link>
+                                    </Button>
+                                    <Button asChild variant="outline" size="icon">
+                                        <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                            <Youtube className="h-5 w-5" />
+                                        </Link>
+                                    </Button>
                                 </div>
                             </div>
                         </CardContent>

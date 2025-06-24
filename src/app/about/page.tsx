@@ -11,7 +11,8 @@ import {
   Shield,
   User,
   Zap,
-  Bot
+  Bot,
+  Atom
 } from 'lucide-react';
 import { AnimatedSection } from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -44,6 +45,11 @@ const howIWork = [
     icon: Bot,
     title: 'AI-Centric Design Philosophy',
     description: 'My core principle: “Let humans think. Let machines execute.” I engineer every Ryha module so AI becomes the brain that manages workflows — from cybersecurity operations to app deployment — all through natural language and autonomous code execution.',
+  },
+  {
+    icon: Atom,
+    title: 'First-Principles Engineering',
+    description: 'I don’t just improve existing tools; I rebuild them from the ground up. Every system in Ryha is re-architected based on fundamental truths, not industry trends, to achieve unparalleled performance and security.',
   },
 ];
 
@@ -90,24 +96,7 @@ export default function AboutPage() {
                 <div className="text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">How I Work for Ryha’s Development</h2>
                      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        {howIWork.slice(0, 3).map((item, index) => (
-                             <Card key={index} className="flex flex-col hologram-effect">
-                                <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
-                                            <item.icon className="h-6 w-6 text-primary" />
-                                        </div>
-                                        <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
-                                    </div>
-                                </CardHeader>
-                                <CardContent className="flex flex-1 flex-col pt-0">
-                                    <p className="text-muted-foreground flex-1">{item.description}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left md:max-w-4xl mx-auto">
-                        {howIWork.slice(3).map((item, index) => (
+                        {howIWork.map((item, index) => (
                              <Card key={index} className="flex flex-col hologram-effect">
                                 <CardHeader>
                                     <div className="flex items-center gap-4">

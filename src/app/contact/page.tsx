@@ -42,7 +42,11 @@ export default function ContactPage() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="mx-auto max-w-2xl space-y-12">
                     <Card className="hologram-effect">
-                        <CardContent className="p-6">
+                        <CardHeader>
+                            <CardTitle>Contact Information</CardTitle>
+                            <CardDescription>You can also reach out to us directly.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
                             <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
                                 <div className="space-y-6 text-center sm:text-left">
                                     <div className="space-y-2">

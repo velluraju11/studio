@@ -1,6 +1,6 @@
 import { Shield, BrainCircuit, User, Infinity, Wallet, Zap, KeyRound, Lightbulb } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const values = [
   { icon: Shield, title: "Security by Design", description: "Not an afterthought, but a foundation." },
@@ -15,25 +15,27 @@ const values = [
 
 export function CoreValues() {
   return (
-    <AnimatedSection id="values">
+    <AnimatedSection id="values" className="bg-card/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent text-glow-accent sm:text-4xl md:text-5xl">Our Core Values</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl md:text-5xl">Our Core Values</h2>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {values.map((value, index) => (
-            <Card key={index} className="bg-card/50 text-center transition-all duration-300 border border-transparent hover:border-primary/80 hover:bg-card hover:-translate-y-2">
-              <CardHeader className="items-center">
-                <div className="rounded-full bg-primary/10 p-3 box-glow-primary">
-                  <value.icon className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="font-headline mt-4 text-lg">{value.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
-              </CardContent>
+        <div className="mt-12">
+            <Card className="border-0 bg-transparent">
+                <CardContent className="grid grid-cols-1 gap-x-8 gap-y-10 p-0 sm:grid-cols-2 lg:grid-cols-4">
+                 {values.map((value, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                        <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
+                            <value.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-lg">{value.title}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">{value.description}</p>
+                        </div>
+                    </div>
+                ))}
+                </CardContent>
             </Card>
-          ))}
         </div>
       </div>
     </AnimatedSection>

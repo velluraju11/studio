@@ -1,46 +1,87 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Cpu, Bot, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cpu, Bot, ShieldCheck, CheckCircle } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
 
 const products = [
   {
     icon: Cpu,
     title: "Ryha OS — The World’s Smartest Operating System",
-    description: "Fully integrated with Ryha AI, voice-controlled, and 10x faster. It automates tasks, features real-time threat detection, and gives you full control over your data with intelligent, private cloud integration.",
-    aiHint: "operating system interface"
+    image: "https://placehold.co/600x400.png",
+    aiHint: "operating system interface",
+    features: [
+      "AI-assisted & voice-controlled OS.",
+      "10x faster with zero bloatware.",
+      "Real-time threat detection.",
+      "Private cloud integration you control.",
+    ],
+    note: "Ryha OS respects your data. You decide what’s stored — on your terms."
   },
   {
     icon: Bot,
     title: "Ryha AI — The Infinite Agent, Reimagined",
-    description: "A next-gen AI with infinite contextual memory and autonomous learning. It's built for total privacy, never collecting your data, and works securely in your private cloud until every task is complete.",
-    aiHint: "artificial intelligence brain"
+    image: "https://placehold.co/600x400.png",
+    aiHint: "artificial intelligence brain",
+    features: [
+      "Infinite contextual memory & autonomous learning.",
+      "100% private, no data collection for training.",
+      "Operates securely in your private cloud.",
+      "Natively integrated into Ryha OS.",
+    ],
+    note: "AI that works for you, not on you."
   },
   {
     icon: ShieldCheck,
     title: "Human Pentesting Agent — AI That Hacks Like a Human",
-    description: "A self-operating cybersecurity expert that simulates human pentesting behavior. It detects vulnerabilities across applications 100x faster than human testers, with over 1000+ tools in a sandboxed warzone.",
-    aiHint: "cybersecurity shield"
+    image: "https://placehold.co/600x400.png",
+    aiHint: "cybersecurity shield",
+    features: [
+      "AI that simulates human pentesting.",
+      "1000+ tools in a sandboxed environment.",
+      "Detects vulnerabilities 100x faster than humans.",
+      "Generates full reports with recordings.",
+    ],
+    note: "Perfect for bug bounty hunters, SOC teams, and ethical hackers."
   }
 ];
 
 export function Products() {
   return (
-    <AnimatedSection id="products" className="bg-card/30">
+    <AnimatedSection id="products">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent text-glow-accent sm:text-4xl md:text-5xl">Flagship Products Powering the Ryha Movement</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl md:text-5xl">Flagship Products</h2>
+           <p className="mt-4 text-lg text-muted-foreground">Powering the Ryha Movement</p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {products.map((product, index) => (
-            <Card key={index} className="bg-card/50 flex flex-col text-center transition-all duration-300 border border-transparent hover:border-primary/80 hover:bg-card hover:-translate-y-2">
-              <CardHeader className="items-center">
-                <div className="rounded-full bg-primary/10 p-4 box-glow-primary">
-                  <product.icon className="h-10 w-10 text-primary" />
-                </div>
-                <CardTitle className="font-headline mt-4 text-xl">{product.title}</CardTitle>
+            <Card key={index} className="hologram-effect flex flex-col">
+              <CardHeader className="p-0">
+                 <Image
+                    src={product.image}
+                    alt={product.title}
+                    width={600}
+                    height={400}
+                    className="rounded-t-lg object-cover"
+                    data-ai-hint={product.aiHint}
+                  />
               </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{product.description}</p>
+              <CardContent className="flex flex-1 flex-col p-6">
+                <div className="flex items-center gap-3">
+                  <product.icon className="h-6 w-6 text-primary" />
+                  <CardTitle className="font-headline text-xl">{product.title}</CardTitle>
+                </div>
+                <ul className="mt-4 flex-1 space-y-3 text-sm text-muted-foreground">
+                    {product.features.map((feature, i) => (
+                         <li key={i} className="flex items-start gap-2">
+                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                            <span>{feature}</span>
+                        </li>
+                    ))}
+                </ul>
+                <p className="mt-4 text-xs text-center italic text-muted-foreground/80 border-t border-border/50 pt-4">
+                  {product.note}
+                </p>
               </CardContent>
             </Card>
           ))}

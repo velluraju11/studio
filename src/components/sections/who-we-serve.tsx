@@ -7,15 +7,15 @@ const sectors = [
 
 export function WhoWeServe() {
   return (
-    <AnimatedSection id="who-we-serve" className="bg-background">
+    <AnimatedSection id="who-we-serve">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary text-glow-primary sm:text-4xl md:text-5xl">Who We Serve</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Who We Serve</h2>
           <p className="mt-4 text-lg text-muted-foreground">Ryha’s technology is built for everyone, across every sector.</p>
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-3 md:gap-4">
           {sectors.map((sector, index) => (
-            <Badge key={index} variant="outline" className="text-md border-primary/50 text-primary/80 py-2 px-4 transition-all hover:bg-primary/20 hover:text-primary hover:border-primary">
+            <Badge key={index} variant="secondary" className="text-md py-2 px-4 transition-all hover:bg-primary/20 hover:text-primary">
               {sector}
             </Badge>
           ))}

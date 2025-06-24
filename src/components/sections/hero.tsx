@@ -31,7 +31,7 @@ export function Hero() {
                 <Link href="/#products">Explore Products</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6">
-                <Link href="/#mission">Our Mission <ArrowRight className="ml-2"/></Link>
+                <Link href="/mission">Our Mission <ArrowRight className="ml-2"/></Link>
               </Button>
             </div>
           </div>

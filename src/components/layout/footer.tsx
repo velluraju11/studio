@@ -15,9 +15,9 @@ export function Footer() {
         <nav className="flex items-center gap-4 text-sm">
             <Link href="/" className="hover:text-primary transition-colors" prefetch={false}>Home</Link>
             <Link href="/mission" className="hover:text-primary transition-colors" prefetch={false}>Mission</Link>
-            <Link href="/about" className="hover:text-primary transition-colors" prefetch={false}>About</Link>
             <Link href="/#products" className="hover:text-primary transition-colors" prefetch={false}>Products</Link>
             <Link href="/blog" className="hover:text-primary transition-colors" prefetch={false}>Blog</Link>
+            <Link href="/about" className="hover:text-primary transition-colors" prefetch={false}>About</Link>
             <Link href="/contact" className="hover:text-primary transition-colors" prefetch={false}>Contact</Link>
         </nav>
       </div>

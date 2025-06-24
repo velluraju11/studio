@@ -39,7 +39,7 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-start">
+                <div className="mx-auto max-w-2xl space-y-12">
                     <Card className="hologram-effect">
                         <CardHeader>
                             <CardTitle>Send us a message</CardTitle>
@@ -75,62 +75,60 @@ export default function ContactPage() {
                         </CardContent>
                     </Card>
 
-                    <div className="space-y-8">
-                        <Card className="hologram-effect">
-                            <CardHeader>
-                                <CardTitle>Contact Information</CardTitle>
-                                <CardDescription>You can also reach out to us directly.</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="space-y-4">
-                                    <div>
-                                        <p className="text-lg font-semibold text-foreground">Email</p>
-                                        <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
-                                            velluraju11@gmail.com
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
-                                        <div className="mt-2 flex gap-4">
-                                            <Button asChild variant="outline" size="icon">
-                                                <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                                    <Instagram className="h-5 w-5" />
-                                                </Link>
-                                            </Button>
-                                            <Button asChild variant="outline" size="icon">
-                                                <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                                    <Linkedin className="h-5 w-5" />
-                                                </Link>
-                                            </Button>
-                                            <Button asChild variant="outline" size="icon">
-                                                <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                                    <Youtube className="h-5 w-5" />
-                                                </Link>
-                                            </Button>
-                                        </div>
+                    <Card className="hologram-effect">
+                        <CardHeader>
+                            <CardTitle>Contact Information</CardTitle>
+                            <CardDescription>You can also reach out to us directly.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-lg font-semibold text-foreground">Email</p>
+                                    <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
+                                        velluraju11@gmail.com
+                                    </a>
+                                </div>
+                                <div>
+                                    <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
+                                    <div className="mt-2 flex gap-4">
+                                        <Button asChild variant="outline" size="icon">
+                                            <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                                <Instagram className="h-5 w-5" />
+                                            </Link>
+                                        </Button>
+                                        <Button asChild variant="outline" size="icon">
+                                            <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                                <Linkedin className="h-5 w-5" />
+                                            </Link>
+                                        </Button>
+                                        <Button asChild variant="outline" size="icon">
+                                            <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                                <Youtube className="h-5 w-5" />
+                                            </Link>
+                                        </Button>
                                     </div>
                                 </div>
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </CardContent>
+                    </Card>
 
-                        <Card className="hologram-effect">
-                            <CardHeader className="flex flex-row items-center gap-4">
-                                <Heart className="h-8 w-8 text-primary" />
-                                <div className="flex-1">
-                                    <CardTitle>Support Our Mission</CardTitle>
-                                    <CardDescription>Your contribution helps us build the future.</CardDescription>
-                                </div>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-muted-foreground mb-4">
-                                    Ryha is a self-funded project driven by passion. Your support allows us to continue our work and push the boundaries of technology.
-                                </p>
-                                <Button asChild className="w-full">
-                                    <Link href="#">Donate Now</Link>
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    <Card className="hologram-effect">
+                        <CardHeader className="flex flex-row items-center gap-4">
+                            <Heart className="h-8 w-8 text-primary" />
+                            <div className="flex-1">
+                                <CardTitle>Support Our Mission</CardTitle>
+                                <CardDescription>Your contribution helps us build the future.</CardDescription>
+                            </div>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground mb-4">
+                                Ryha is a self-funded project driven by passion. Your support allows us to continue our work and push the boundaries of technology.
+                            </p>
+                            <Button asChild className="w-full">
+                                <Link href="#">Donate Now</Link>
+                            </Button>
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </AnimatedSection>

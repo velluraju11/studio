@@ -47,7 +47,7 @@ export default function ContactPage() {
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                           <div className="flex flex-col sm:flex-row gap-8 items-center">
+                           <div className="flex flex-col sm:flex-row gap-8 items-start">
                                 <div className="flex-1 space-y-4">
                                     <div>
                                         <p className="text-lg font-semibold text-foreground">Email</p>

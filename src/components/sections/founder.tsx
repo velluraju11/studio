@@ -1,41 +1,39 @@
 import Image from 'next/image';
 import { AnimatedSection } from "@/components/animated-section";
+import { Button } from '@/components/ui/button';
 
-export function Founder() {
+export function About() {
   return (
-    <AnimatedSection id="founder" className="bg-card/50">
+    <AnimatedSection id="about">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-12 md:grid-cols-5 md:gap-16">
-          <div className="md:col-span-2 flex flex-col items-center text-center">
-            <div className="relative h-48 w-48">
+        <div className="grid gap-12 md:grid-cols-5 md:gap-16 items-center">
+          <div className="md:col-span-2 flex justify-center">
+            <div className="relative h-64 w-64">
               <Image
-                src="https://placehold.co/200x200.png"
-                alt="Velluraju C, Founder of Ryha"
-                width={200}
-                height={200}
-                className="rounded-full border-4 border-primary object-cover box-glow-primary"
-                data-ai-hint="hacker portrait"
+                src="https://placehold.co/400x400.png"
+                alt="John Doe, Visual Designer"
+                width={400}
+                height={400}
+                className="rounded-lg object-cover"
+                data-ai-hint="designer portrait"
               />
-               <div className="absolute inset-0 rounded-full hologram-effect"></div>
             </div>
-            <h3 className="mt-6 font-headline text-2xl font-bold">Velluraju C</h3>
-            <p className="text-muted-foreground">Solo Architect, Student, Hacker Aspirant</p>
-            <blockquote className="mt-6 border-l-4 border-accent pl-4 text-left italic text-accent/90">
-              "I didn’t just want to build an OS, an AI, or a tool. I wanted to build a world."
-            </blockquote>
           </div>
           <div className="md:col-span-3">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary text-glow-primary sm:text-4xl">About the Founder</h2>
-            <div className="mt-6 space-y-4 text-foreground/80">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl">About Me</h2>
+            <div className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                I’m Velluraju C — the solo architect behind Ryha. I didn’t have a team or funding. But I had a vision — and the hunger to build a revolution. Everything Ryha is today was designed, developed, and optimized by me alone: line by line, system by system. No shortcuts. No compromises.
+                I'm John Doe, a passionate visual designer and UX specialist with a knack for creating intuitive, beautiful, and impactful digital experiences. My journey into design started with a simple curiosity about how things work, which evolved into a deep-seated passion for crafting user-centric solutions.
               </p>
               <p>
-                With the loyal support of my close friend Sanjay, I built Ryha OS, Ryha AI, and the Human Pentesting Agent. Every interface, security layer, and AI prompt is my code, my design, my battle.
+                With over 5 years of experience in the industry, I've had the privilege of working with a diverse range of clients, from innovative startups to established corporations. My approach is collaborative and iterative, focusing on understanding user needs to deliver designs that are not only visually stunning but also highly functional.
               </p>
-              <p className="font-bold text-foreground">
-                Ryha isn’t just a startup. It’s my rebellion — against surveillance, against complexity, against control. It’s the future I want to live in, where machines serve, not spy. This is just the beginning.
+              <p className="text-foreground">
+                I believe that great design is about problem-solving and storytelling. Let's work together to tell your story.
               </p>
+               <Button size="lg" variant="outline" className="mt-4">
+                Download Resume
+              </Button>
             </div>
           </div>
         </div>

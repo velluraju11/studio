@@ -14,7 +14,8 @@ import {
   Bot,
   Atom,
   Instagram,
-  Linkedin
+  Linkedin,
+  Youtube
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/animated-section';
@@ -101,6 +102,11 @@ export default function AboutPage() {
                   <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
                   </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                    <Link href="https://www.youtube.com/@RyhaOfficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <Youtube className="h-5 w-5" />
+                    </Link>
                 </Button>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { AnimatedSection } from '@/components/animated-section';
 import { products } from '@/lib/products';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, ArrowLeft } from 'lucide-react';
+import { CheckCircle, ArrowLeft, Users } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -65,6 +65,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                         </Badge>
                       </div>
                   </div>
+                  
+                  <p className="mt-6 text-muted-foreground leading-relaxed">{product.description}</p>
 
                   <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-border pt-8">
                       <div>
@@ -84,6 +86,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                             "{product.note}"
                           </p>
                       </div>
+                  </div>
+
+                  <div className="mt-8 border-t border-border pt-8">
+                    <h3 className="text-xl font-bold text-accent mb-4 flex items-center gap-2">
+                      <Users className="h-5 w-5" />
+                      Who It's For
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {product.targetAudience.map((audience, i) => (
+                        <Badge key={i} variant="secondary" className="text-sm py-1 px-3">
+                          {audience}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>
               </Card>

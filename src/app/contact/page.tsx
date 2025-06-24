@@ -42,41 +42,6 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-2xl space-y-12">
                     <Card className="hologram-effect">
                         <CardHeader>
-                            <CardTitle>Send us a message</CardTitle>
-                            <CardDescription>This will open your default email client.</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <form 
-                                action="mailto:velluraju11@gmail.com" 
-                                method="post" 
-                                encType="text/plain"
-                                className="space-y-6"
-                            >
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <Label htmlFor="name">Name</Label>
-                                        <Input id="name" name="name" placeholder="Enter your name" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <Label htmlFor="email">Your Email</Label>
-                                        <Input id="email" name="email" type="email" placeholder="Enter your email" />
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="subject">Subject</Label>
-                                    <Input id="subject" name="subject" placeholder="What's this about?" />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="message">Message</Label>
-                                    <Textarea id="message" name="message" placeholder="Your message..." rows={5} />
-                                </div>
-                                <Button type="submit" className="w-full">Send Message</Button>
-                            </form>
-                        </CardContent>
-                    </Card>
-
-                    <Card className="hologram-effect">
-                        <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
@@ -109,6 +74,41 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                             </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="hologram-effect">
+                        <CardHeader>
+                            <CardTitle>Send us a message</CardTitle>
+                            <CardDescription>This will open your default email client.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <form 
+                                action="mailto:velluraju11@gmail.com" 
+                                method="post" 
+                                encType="text/plain"
+                                className="space-y-6"
+                            >
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="name">Name</Label>
+                                        <Input id="name" name="name" placeholder="Enter your name" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="email">Your Email</Label>
+                                        <Input id="email" name="email" type="email" placeholder="Enter your email" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="subject">Subject</Label>
+                                    <Input id="subject" name="subject" placeholder="What's this about?" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="message">Message</Label>
+                                    <Textarea id="message" name="message" placeholder="Your message..." rows={5} />
+                                </div>
+                                <Button type="submit" className="w-full">Send Message</Button>
+                            </form>
                         </CardContent>
                     </Card>
 

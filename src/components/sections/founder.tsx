@@ -11,11 +11,12 @@ export function Founder() {
         <div className="mx-auto max-w-4xl text-center">
           <Glow />
           <Image
-            src="/founder.jpg"
+            src="https://placehold.co/120x120.png"
             alt="Velluraju C, Founder of Ryha"
             width={120}
             height={120}
             className="mx-auto rounded-full border-2 border-primary/30 object-cover shadow-lg"
+            data-ai-hint="founder portrait"
           />
           <h2 className="mt-8 bg-gradient-to-br from-primary from-30% to-primary/70 bg-clip-text text-3xl font-bold tracking-tighter text-transparent sm:text-4xl">
             About the Founder – Velluraju C

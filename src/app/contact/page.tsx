@@ -2,7 +2,7 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Mail, Heart, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Heart, Instagram, Linkedin, Youtube, MapPin, Phone } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -39,7 +39,7 @@ export default function ContactPage() {
 
         <AnimatedSection className="pb-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-3xl space-y-8">
+                <div className="mx-auto max-w-4xl space-y-8">
                     <Card className="hologram-effect">
                         <CardHeader>
                             <CardTitle>Contact Information</CardTitle>
@@ -74,8 +74,18 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                                 <div className="sm:text-right">
-                                    <h3 className="font-headline text-xl font-bold">Velluraju C</h3>
+                                    <p className="font-semibold text-lg text-foreground">Velluraju C</p>
                                     <p className="text-muted-foreground">Founder of Ryha</p>
+                                    <div className="mt-4 space-y-2 text-sm">
+                                        <div className="flex items-center justify-end gap-2 text-muted-foreground">
+                                            <MapPin className="h-4 w-4 flex-shrink-0" />
+                                            <span>Tirunelveli, Tamil Nadu, India</span>
+                                        </div>
+                                        <div className="flex items-center justify-end gap-2 text-muted-foreground">
+                                            <Phone className="h-4 w-4 flex-shrink-0" />
+                                            <a href="tel:+919488925913" className="hover:text-primary">+91 9488925913</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </CardContent>

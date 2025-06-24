@@ -2,7 +2,7 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Bot, Combine, Cpu, ShieldCheck, Target, Zap, User } from 'lucide-react';
+import { Bot, Combine, Cpu, ShieldCheck, Target, Zap, User, KeyRound } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -31,6 +31,11 @@ const achievements = [
         icon: Combine,
         title: 'Bridge Between Human Creativity & Machine Precision',
         description: 'By removing friction in development, testing, UI/UX design, and more — Ryha empowers creators to focus purely on vision, while the AI handles execution.',
+    },
+    {
+        icon: KeyRound,
+        title: 'Unrivaled Security as a Standard',
+        description: 'To deliver a level of security so advanced that no competitor can match it, making Ryha the #1 trusted name in digital protection.',
     },
 ];
 

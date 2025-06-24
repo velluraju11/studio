@@ -2,8 +2,9 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Bot, Combine, Cpu, ShieldCheck, Target, Zap } from 'lucide-react';
+import { Bot, Combine, Cpu, ShieldCheck, Target, Zap, User } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const achievements = [
     {
@@ -33,6 +34,26 @@ const achievements = [
     },
 ];
 
+const principles = [
+    {
+        icon: Zap,
+        title: 'Autonomy, Not Assistance',
+        description: 'We build agents that act on your behalf, handle full workflows, troubleshoot systems, and continuously evolve.',
+        quote: '“If Ryha OS is your digital universe, then Ryha AI is the mind that powers it.”'
+    },
+    {
+        icon: ShieldCheck,
+        title: 'Security by Default',
+        description: 'Security is the DNA of our architecture. Every operation is encrypted, monitored, and isolated. No spyware, no forced data pipelines.',
+        quote: '“You decide what’s stored, when it’s stored, and where it lives — not us.”'
+    },
+    {
+        icon: User,
+        title: 'Human-Centric AI',
+        description: 'Ryha understands context, adapts to your needs, and executes without error. It feels like working with another mind, not a machine.',
+        quote: '“A system that thinks like you, works for you, and never forgets.”'
+    }
+]
 
 export default function MissionPage() {
   return (
@@ -62,57 +83,56 @@ export default function MissionPage() {
 
         <AnimatedSection>
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-4xl space-y-16">
+                <div className="mx-auto max-w-6xl space-y-20">
                     <div className="text-center">
                         <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">What This Means in Practice</h2>
-                        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                            <div className="space-y-2">
-                                <h3 className="font-bold text-xl text-foreground">🔧 Autonomy, Not Assistance</h3>
-                                <p className="text-muted-foreground">We build agents that act on your behalf, handle full workflows, troubleshoot systems, and continuously evolve.</p>
-                                 <blockquote className="border-l-2 border-primary/50 pl-4 text-foreground/80 text-sm italic">
-                                    “If Ryha OS is your digital universe, then Ryha AI is the mind that powers it.”
-                                </blockquote>
-                            </div>
-                             <div className="space-y-2">
-                                <h3 className="font-bold text-xl text-foreground">🔐 Security by Default</h3>
-                                <p className="text-muted-foreground">Security is the DNA of our architecture. Every operation is encrypted, monitored, and isolated. No spyware, no forced data pipelines.</p>
-                                 <blockquote className="border-l-2 border-primary/50 pl-4 text-foreground/80 text-sm italic">
-                                    “You decide what’s stored, when it’s stored, and where it lives — not us.”
-                                </blockquote>
-                            </div>
-                            <div className="space-y-2">
-                                <h3 className="font-bold text-xl text-foreground">⚙️ Human-Centric AI</h3>
-                                <p className="text-muted-foreground">Ryha understands context, adapts to your needs, and executes without error. It feels like working with another mind, not a machine.</p>
-                                 <blockquote className="border-l-2 border-primary/50 pl-4 text-foreground/80 text-sm italic">
-                                    “A system that thinks like you, works for you, and never forgets.”
-                                </blockquote>
-                            </div>
+                        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                            {principles.map((principle, index) => (
+                                <Card key={index} className="flex flex-col hologram-effect">
+                                    <CardHeader>
+                                        <div className="flex items-center gap-4">
+                                            <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
+                                                <principle.icon className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <CardTitle className="text-xl text-foreground">{principle.title}</CardTitle>
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent className="flex flex-1 flex-col pt-0">
+                                        <p className="text-muted-foreground flex-1">{principle.description}</p>
+                                        <blockquote className="mt-6 border-l-2 border-primary/50 pl-4 text-foreground/80 text-sm italic">
+                                            {principle.quote}
+                                        </blockquote>
+                                    </CardContent>
+                                </Card>
+                            ))}
                         </div>
                     </div>
 
                     <div className="text-center">
                         <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">What We Aim to Achieve</h2>
-                        <div className="mt-10 grid grid-cols-1 gap-8 text-left sm:grid-cols-2">
+                        <div className="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
                             {achievements.map((item, index) => (
-                                <div key={index} className="flex items-start gap-4">
-                                    <div className="rounded-lg bg-primary/10 p-3 border border-primary/20 mt-1">
-                                        <item.icon className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-foreground">{item.title}</h3>
-                                        <p className="text-muted-foreground mt-1">{item.description}</p>
-                                    </div>
-                                </div>
+                                <Card key={index} className="flex flex-col bg-card/50">
+                                    <CardContent className="p-6 flex items-start gap-4">
+                                        <div className="rounded-lg bg-primary/10 p-3 border border-primary/20 mt-1 flex-shrink-0">
+                                            <item.icon className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-lg text-foreground">{item.title}</h3>
+                                            <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
                             ))}
                         </div>
                     </div>
 
-                    <div className="text-center space-y-4 border-t border-border pt-12">
+                    <div className="text-center space-y-4 border-t border-border pt-16">
                         <h3 className="font-headline text-2xl font-bold tracking-tighter text-accent sm:text-3xl">Ryha’s Mission in One Line:</h3>
-                         <p className="text-xl text-foreground/90 md:text-2xl">
+                         <p className="text-2xl font-bold text-foreground/90 md:text-3xl">
                             To build a world where machines work not just with you — but for you — intelligently, securely, and forever.
                         </p>
-                         <div className="text-lg text-muted-foreground pt-4">
+                         <div className="text-lg text-muted-foreground pt-4 max-w-2xl mx-auto">
                             <p>We’re not chasing hype. We’re not copying Silicon Valley.</p>
                             <p className="font-bold text-foreground mt-2">We’re building the first AI-native tech empire — engineered from scratch, by one mind, for the entire world.</p>
                         </div>

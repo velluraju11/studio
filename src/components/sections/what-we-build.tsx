@@ -9,7 +9,8 @@ const features = [
   "Deliver extreme performance with an ultra-light system footprint",
   "Fuse human creativity with machine precision",
   "Assist in coding, UI/UX, cybersecurity, DevOps, testing, and more",
-  "Serve all industries — from students to defense"
+  "Serve all industries — from students to defense",
+  "Ensure seamless integration across all digital tools and platforms"
 ];
 
 export function WhatWeBuild() {

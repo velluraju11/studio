@@ -1,10 +1,12 @@
 import { Header } from '@/components/layout/header';
 import { Hero } from '@/components/sections/hero';
-import { SelectedWorks } from '@/components/sections/products';
-import { Services } from '@/components/sections/what-we-build';
-import { About } from '@/components/sections/founder';
-import { Contact } from '@/components/sections/mission';
+import { Products } from '@/components/sections/products';
+import { WhatWeBuild } from '@/components/sections/what-we-build';
+import { Founder } from '@/components/sections/founder';
+import { OurMission } from '@/components/sections/mission';
 import { Footer } from '@/components/layout/footer';
+import { WhoWeServe } from '@/components/sections/who-we-serve';
+import { CoreValues } from '@/components/sections/core-values';
 
 export default function Home() {
   return (
@@ -12,10 +14,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <SelectedWorks />
-        <Services />
-        <About />
-        <Contact />
+        <OurMission />
+        <WhatWeBuild />
+        <Products />
+        <WhoWeServe />
+        <CoreValues />
+        <Founder />
       </main>
       <Footer />
     </div>

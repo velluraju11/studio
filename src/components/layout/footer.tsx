@@ -1,18 +1,13 @@
-import { Github, Twitter, Linkedin } from 'lucide-react';
-import Link from 'next/link';
-
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 py-8 md:flex-row md:px-6">
+    <footer className="border-t border-border/20 bg-transparent py-8">
+      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 text-center md:flex-row md:px-6">
         <div className="flex items-center gap-2">
-          <span className="font-headline text-xl font-bold">John Doe</span>
+          <span className="font-headline text-lg font-bold">Ryha Group of Companies</span>
         </div>
-        <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} John Doe. All Rights Reserved.</p>
-        <div className="flex items-center gap-4">
-          <Link href="#" aria-label="Twitter"><Twitter className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" /></Link>
-          <Link href="#" aria-label="GitHub"><Github className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" /></Link>
-          <Link href="#" aria-label="LinkedIn"><Linkedin className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" /></Link>
+        <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Ryha. The Future, Engineered for Everyone.</p>
+        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <span>Built from the ground up.</span>
         </div>
       </div>
     </footer>

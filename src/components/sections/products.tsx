@@ -1,66 +1,46 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Cpu, Bot, ShieldCheck } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 
-const projects = [
+const products = [
   {
-    title: "E-commerce Platform",
-    description: "A complete redesign of a leading e-commerce platform, focusing on user flow and conversion optimization.",
-    image: "https://placehold.co/600x400.png",
-    tags: ["UI/UX", "Web Design", "Figma"],
-    aiHint: "ecommerce website"
+    icon: Cpu,
+    title: "Ryha OS — The World’s Smartest Operating System",
+    description: "Fully integrated with Ryha AI, voice-controlled, and 10x faster. It automates tasks, features real-time threat detection, and gives you full control over your data with intelligent, private cloud integration.",
+    aiHint: "operating system interface"
   },
   {
-    title: "Mobile Banking App",
-    description: "A secure and intuitive mobile banking app that simplifies personal finance management.",
-    image: "https://placehold.co/600x400.png",
-    tags: ["Mobile App", "Fintech", "UX Research"],
-    aiHint: "mobile banking"
+    icon: Bot,
+    title: "Ryha AI — The Infinite Agent, Reimagined",
+    description: "A next-gen AI with infinite contextual memory and autonomous learning. It's built for total privacy, never collecting your data, and works securely in your private cloud until every task is complete.",
+    aiHint: "artificial intelligence brain"
   },
   {
-    title: "SaaS Dashboard",
-    description: "An analytics dashboard for a B2B SaaS product, designed for clarity and actionable insights.",
-    image: "https://placehold.co/600x400.png",
-    tags: ["SaaS", "Dashboard", "Data Visualization"],
-    aiHint: "saas dashboard"
-  },
-  {
-    title: "Corporate Branding",
-    description: "A full corporate identity and branding guide for a tech startup, from logo to marketing materials.",
-    image: "https://placehold.co/600x400.png",
-    tags: ["Branding", "Graphic Design", "Strategy"],
-    aiHint: "corporate branding"
-  },
-]
+    icon: ShieldCheck,
+    title: "Human Pentesting Agent — AI That Hacks Like a Human",
+    description: "A self-operating cybersecurity expert that simulates human pentesting behavior. It detects vulnerabilities across applications 100x faster than human testers, with over 1000+ tools in a sandboxed warzone.",
+    aiHint: "cybersecurity shield"
+  }
+];
 
-export function SelectedWorks() {
+export function Products() {
   return (
-    <AnimatedSection id="work">
+    <AnimatedSection id="products">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Selected Works</h2>
-          <p className="mt-4 text-lg text-muted-foreground">A collection of my favorite projects.</p>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent text-glow-accent sm:text-4xl md:text-5xl">Flagship Products Powering the Ryha Movement</h2>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <Card key={index} className="bg-card border-border overflow-hidden group transition-all duration-300 hover:border-primary/50 hover:-translate-y-2">
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    data-ai-hint={project.aiHint}
-                />
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
-                <CardDescription className="pt-2">{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+          {products.map((product, index) => (
+            <Card key={index} className="hologram-effect flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50">
+              <CardHeader className="items-center">
+                <div className="rounded-full bg-primary/20 p-4 box-glow-primary">
+                  <product.icon className="h-10 w-10 text-primary" />
                 </div>
+                <CardTitle className="font-headline mt-4 text-xl">{product.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-muted-foreground">{product.description}</p>
               </CardContent>
             </Card>
           ))}

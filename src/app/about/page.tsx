@@ -61,6 +61,7 @@ const characteristics = [
     { icon: Rocket, title: "Zero Dependence", description: "I don’t wait on platforms or tools. I build my own." },
     { icon: Network, title: "System Thinker", description: "I see the whole structure — from UI flow to backend logic to AI interaction — and I build accordingly." },
     { icon: Target, title: "Vision-Locked", description: "Once I define a mission, I execute ruthlessly until it's complete." },
+    { icon: Code, title: "Code as Craft", description: "I write every line with precision and intent, building systems that are elegant, efficient, and resilient." },
 ];
 
 

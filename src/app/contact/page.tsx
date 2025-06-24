@@ -2,7 +2,7 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimatedSection } from '@/components/animated-section';
-import { Mail, Heart } from 'lucide-react';
+import { Mail, Heart, Instagram, Linkedin } from 'lucide-react';
 import { Glow } from '@/components/ui/glow';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -82,10 +82,29 @@ export default function ContactPage() {
                                 <CardDescription>You can also reach out to us directly.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg font-semibold text-foreground">Email</p>
-                                <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
-                                    velluraju11@gmail.com
-                                </a>
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="text-lg font-semibold text-foreground">Email</p>
+                                        <a href="mailto:velluraju11@gmail.com" className="text-primary hover:underline">
+                                            velluraju11@gmail.com
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p className="text-lg font-semibold text-foreground">Follow on Social Media</p>
+                                        <div className="mt-2 flex gap-4">
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                                    <Instagram className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                            <Button asChild variant="outline" size="icon">
+                                                <Link href="https://linkedin.com/in/velluraju" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                                    <Linkedin className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
                             </CardContent>
                         </Card>
 

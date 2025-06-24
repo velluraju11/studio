@@ -20,22 +20,20 @@ export function CoreValues() {
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl md:text-5xl">Our Core Values</h2>
         </div>
-        <div className="mt-12">
-            <Card className="border-0 bg-transparent">
-                <CardContent className="grid grid-cols-1 gap-x-8 gap-y-10 p-0 sm:grid-cols-2 lg:grid-cols-4">
-                 {values.map((value, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                        <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
+        <div className="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value, index) => (
+                <Card key={index} className="flex flex-col bg-card/50">
+                    <CardContent className="p-6 flex items-start gap-4">
+                        <div className="rounded-lg bg-primary/10 p-3 border border-primary/20 mt-1 flex-shrink-0">
                             <value.icon className="h-6 w-6 text-primary" />
                         </div>
                         <div>
                             <h3 className="font-bold text-lg">{value.title}</h3>
-                            <p className="text-sm text-muted-foreground mt-1">{value.description}</p>
+                            <p className="text-sm text-muted-foreground">{value.description}</p>
                         </div>
-                    </div>
-                ))}
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
+            ))}
         </div>
       </div>
     </AnimatedSection>

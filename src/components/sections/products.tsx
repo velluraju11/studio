@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cpu, Bot, ShieldCheck, CheckCircle } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
+import { Badge } from "@/components/ui/badge";
 
 const products = [
   {
@@ -9,6 +10,7 @@ const products = [
     title: "Ryha OS — The World’s Smartest Operating System",
     image: "https://placehold.co/600x400.png",
     aiHint: "operating system interface",
+    status: "Under Development",
     features: [
       "AI-assisted & voice-controlled OS.",
       "10x faster with zero bloatware.",
@@ -22,6 +24,7 @@ const products = [
     title: "Ryha AI — The Infinite Agent, Reimagined",
     image: "https://placehold.co/600x400.png",
     aiHint: "artificial intelligence brain",
+    status: "Under Development",
     features: [
       "Infinite contextual memory & autonomous learning.",
       "100% private, no data collection for training.",
@@ -35,6 +38,7 @@ const products = [
     title: "Human Pentesting Agent — AI That Hacks Like a Human",
     image: "https://placehold.co/600x400.png",
     aiHint: "cybersecurity shield",
+    status: "Planned",
     features: [
       "AI that simulates human pentesting.",
       "1000+ tools in a sandboxed environment.",
@@ -71,6 +75,14 @@ export function Products() {
                   <product.icon className="h-6 w-6 text-primary" />
                   <CardTitle className="font-headline text-xl">{product.title}</CardTitle>
                 </div>
+
+                <Badge 
+                  variant={product.status === 'Planned' ? 'secondary' : 'default'} 
+                  className="mt-4 w-fit"
+                >
+                  {product.status}
+                </Badge>
+
                 <ul className="mt-4 flex-1 space-y-3 text-sm text-muted-foreground">
                     {product.features.map((feature, i) => (
                          <li key={i} className="flex items-start gap-2">
@@ -79,7 +91,7 @@ export function Products() {
                         </li>
                     ))}
                 </ul>
-                <p className="mt-4 text-xs text-center italic text-muted-foreground/80 border-t border-border/50 pt-4">
+                <p className="mt-auto border-t border-border/50 pt-4 text-center text-xs italic text-muted-foreground/80">
                   {product.note}
                 </p>
               </CardContent>

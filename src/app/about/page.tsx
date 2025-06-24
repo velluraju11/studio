@@ -1,11 +1,62 @@
 
-import Image from 'next/image';
+import {
+  BrainCircuit,
+  Code,
+  Target,
+  Lock,
+  Mic,
+  Network,
+  Rocket,
+  Search,
+  Shield,
+  User,
+  Zap,
+  Bot
+} from 'lucide-react';
 import { AnimatedSection } from '@/components/animated-section';
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, User } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Glow } from '@/components/ui/glow';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+
+const howIWork = [
+  {
+    icon: BrainCircuit,
+    title: 'Self-Evolving AI Architecture',
+    description: "I’m building Ryha to be modular, autonomous, and self-modifying — an AI that doesn't just assist but learns, adapts, and rewrites its own code to serve better.",
+  },
+  {
+    icon: Shield,
+    title: 'Cyberwarfare-First Mindset',
+    description: 'Every module is designed from the mindset of a cyberwarrior: secure, resilient, untouchable. Offensive and defensive systems are coded with precision, tested like weapons, and evolve through AI-powered feedback loops.',
+  },
+  {
+    icon: Mic,
+    title: 'Voice-Led OS Engineering',
+    description: 'I develop Ryha with voice-first architecture — where everything from launching apps to hacking simulations can be controlled hands-free, with full-stack control across OS, VMs, and AI agents.',
+  },
+  {
+    icon: Code,
+    title: 'Dynamic Programming',
+    description: 'I work without boundaries — constantly developing code that modifies itself, optimizes systems, and builds new layers of functionality automatically based on commands I issue.',
+  },
+  {
+    icon: Bot,
+    title: 'AI-Centric Design Philosophy',
+    description: 'My core principle: “Let humans think. Let machines execute.” I engineer every Ryha module so AI becomes the brain that manages workflows — from cybersecurity operations to app deployment — all through natural language and autonomous code execution.',
+  },
+];
+
+const characteristics = [
+    { icon: Zap, title: "Relentlessly Fast", description: "I build like time doesn’t exist — always in high-output, no-waste mode." },
+    { icon: Search, title: "Hyper-Analytical", description: "I reverse-engineer problems, systems, and human behavior — turning chaos into structure." },
+    { icon: Lock, title: "Security-Obsessed", description: "Privacy, control, and security are non-negotiable." },
+    { icon: Bot, title: "AI-Driven Everything", description: "If a task can be done by AI, I’ll make it automatic." },
+    { icon: Rocket, title: "Zero Dependence", description: "I don’t wait on platforms or tools. I build my own." },
+    { icon: Network, title: "System Thinker", description: "I see the whole structure — from UI flow to backend logic to AI interaction — and I build accordingly." },
+    { icon: Target, title: "Vision-Locked", description: "Once I define a mission, I execute ruthlessly until it's complete." },
+];
+
 
 export default function AboutPage() {
   return (
@@ -24,103 +75,85 @@ export default function AboutPage() {
                 <User className="h-10 w-10 text-primary" />
               </div>
               <h1 className="font-headline text-4xl font-black tracking-tighter text-primary sm:text-5xl md:text-6xl">
-                About The Founder
+                About Me — Velluraju C
               </h1>
               <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-                The mind behind the mission.
+                Founder & Visionary Architect of Ryha, the World's First AI-Native Cyberwarfare Ecosystem. I’m not just building software — I’m engineering an AI-driven revolution. As the World’s No. 1 Hacker Aspirant, I live to break barriers — in code, systems, and thinking. I lead the development of Ryha, a next-generation operating system and AI framework that fuses cybersecurity, automation, and intelligence into a single unified force.
               </p>
             </div>
           </div>
         </AnimatedSection>
 
-        <AnimatedSection className="pb-20">
-          <div className="container relative z-10 mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-4xl text-center">
-              <Image
-                src="https://placehold.co/120x120.png"
-                alt="Velluraju C, Founder of Ryha"
-                width={120}
-                height={120}
-                className="mx-auto rounded-full border-2 border-primary/30 object-cover shadow-lg"
-                data-ai-hint="founder portrait"
-              />
-              <h2 className="mt-8 bg-gradient-to-br from-primary from-30% to-primary/70 bg-clip-text text-3xl font-bold tracking-tighter text-transparent sm:text-4xl">
-                Velluraju C
-              </h2>
-              <div className="mx-auto mt-8 max-w-3xl space-y-6 text-left text-lg text-muted-foreground">
-                <p>
-                  I’m Velluraju C — the solo architect, student, and world’s number
-                  one hacker aspirant behind Ryha.
-                </p>
-                <p>
-                  I didn’t have a team. I didn’t have funding. But I had a vision —
-                  and the hunger to build a revolution.
-                </p>
-                <p>
-                  Everything Ryha is today — from the bootloader of Ryha OS to the
-                  brain of Ryha AI, to the core of the Human Pentesting Agent — was
-                  designed, developed, and optimized by me alone: line by line,
-                  system by system. No shortcuts. No compromises.
-                </p>
-                <p>With the loyal support of my close friend Sanjay, I built:</p>
-                <Card className="border-primary/20 bg-card/50 text-left">
-                  <CardContent className="p-6">
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span>
-                          <span className="font-semibold text-foreground">
-                            Ryha OS
-                          </span>{' '}
-                          — a voice-controlled, AI-powered operating system that
-                          adapts to you
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span>
-                          <span className="font-semibold text-foreground">
-                            Ryha AI
-                          </span>{' '}
-                          — a privacy-first, lightning-fast, all-capable AI
-                          assistant that never stops until the task is done
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span>
-                          <span className="font-semibold text-foreground">
-                            Human Pentesting Agent
-                          </span>{' '}
-                          — a fully autonomous ethical hacker that works like a
-                          human, but 100x faster
-                        </span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-                <p>
-                  Every interface. Every security layer. Every AI prompt and
-                  response — it’s my code, my design, my battle. Built with
-                  obsession, late nights, and raw determination.
-                </p>
-                <p>
-                  Ryha isn’t just a startup. It’s my rebellion — against
-                  surveillance, against complexity, against control. It’s the future
-                  I want to live in — where machines serve, not spy… where
-                  technology feels like magic you own.
-                </p>
-                <p>
-                  This is just the beginning. I’m Velluraju C — and Ryha is my
-                  digital revolution. You’ll see what’s coming next.
-                </p>
-                <blockquote className="border-l-2 border-primary/50 pl-6 text-xl text-foreground/90">
-                  “I didn’t just want to build an OS, an AI, or a tool. I wanted to
-                  build a world — where humans and machines thrive together. And
-                  that’s what Ryha is.”
-                </blockquote>
-              </div>
-            </div>
+        <AnimatedSection className="pb-20 space-y-20">
+          <div className="container mx-auto px-4 md:px-6">
+             <div className="mx-auto max-w-6xl space-y-20">
+                <div className="text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">How I Work for Ryha’s Development</h2>
+                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                        {howIWork.slice(0, 3).map((item, index) => (
+                             <Card key={index} className="flex flex-col hologram-effect">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
+                                            <item.icon className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex flex-1 flex-col pt-0">
+                                    <p className="text-muted-foreground flex-1">{item.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left md:max-w-4xl mx-auto">
+                        {howIWork.slice(3).map((item, index) => (
+                             <Card key={index} className="flex flex-col hologram-effect">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="rounded-lg bg-primary/10 p-2 border border-primary/20">
+                                            <item.icon className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex flex-1 flex-col pt-0">
+                                    <p className="text-muted-foreground flex-1">{item.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">My Characteristics as a Builder & Leader</h2>
+                     <div className="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2 lg:grid-cols-4">
+                        {characteristics.map((item, index) => (
+                            <Card key={index} className="flex flex-col bg-card/50">
+                                <CardContent className="p-6 flex items-start gap-4">
+                                    <div className="rounded-lg bg-primary/10 p-3 border border-primary/20 mt-1 flex-shrink-0">
+                                        <item.icon className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-lg text-foreground">{item.title}</h3>
+                                        <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="text-center space-y-8 border-t border-border pt-16 max-w-4xl mx-auto">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter text-accent sm:text-4xl">Why I Built Ryha</h2>
+                     <p className="text-lg text-muted-foreground">
+                        I created Ryha not just as a tool, but as a movement. A way to redefine what it means to interact with technology. To make AI the executor of human will, with full control, total security, and limitless potential.
+                    </p>
+                    <blockquote className="border-l-2 border-primary/50 pl-6 text-xl text-foreground/90 italic">
+                        “Ryha is my vision, my weapon, and my contribution to the world — an empire built from scratch, where AI obeys, protects, and empowers.”
+                    </blockquote>
+                </div>
+             </div>
           </div>
         </AnimatedSection>
       </main>

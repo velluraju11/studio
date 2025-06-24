@@ -28,10 +28,10 @@ export function Hero() {
               </blockquote>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="#products">Explore Products</Link>
+                <Link href="/#products">Explore Products</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6">
-                <Link href="#mission">Our Mission <ArrowRight className="ml-2"/></Link>
+                <Link href="/mission">Our Mission <ArrowRight className="ml-2"/></Link>
               </Button>
             </div>
           </div>

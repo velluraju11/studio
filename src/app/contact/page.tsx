@@ -47,17 +47,17 @@ export default function ContactPage() {
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                                <div className="md:col-span-2 space-y-6 text-center md:text-left">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                                <div className="md:col-span-2 space-y-6">
                                     <div className="space-y-2">
-                                        <p className="text-sm font-semibold text-muted-foreground">Email</p>
-                                        <a href="mailto:velluraju11@gmail.com" className="text-lg text-primary hover:underline block truncate">
+                                        <Label className="text-muted-foreground">Email</Label>
+                                        <a href="mailto:velluraju11@gmail.com" className="text-lg font-medium text-primary hover:underline block truncate">
                                             velluraju11@gmail.com
                                         </a>
                                     </div>
                                     <div>
-                                        <p className="text-sm font-semibold text-muted-foreground">Follow</p>
-                                        <div className="mt-2 flex gap-4 justify-center md:justify-start">
+                                        <Label className="text-muted-foreground">Follow</Label>
+                                        <div className="mt-2 flex gap-4">
                                             <Button asChild variant="outline" size="icon">
                                                 <Link href="https://instagram.com/vellu.raju" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                                     <Instagram className="h-5 w-5" />
@@ -76,17 +76,20 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-center">
-                                    <Image
-                                        src="https://placehold.co/128x128.png"
-                                        alt="Velluraju C"
-                                        width={128}
-                                        height={128}
-                                        className="rounded-full mx-auto border-2 border-primary/30 shadow-lg"
-                                        data-ai-hint="founder portrait professional"
-                                    />
-                                    <h3 className="font-headline text-2xl font-bold mt-4">Velluraju C</h3>
-                                    <p className="text-muted-foreground">Founder of Ryha</p>
+                                <div className="text-center relative">
+                                    <div className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-5" style={{ backgroundImage: "url('https://placehold.co/200x200.png')" }} data-ai-hint="doodle background abstract"></div>
+                                    <div className="relative z-10">
+                                        <Image
+                                            src="https://placehold.co/128x128.png"
+                                            alt="Velluraju C"
+                                            width={128}
+                                            height={128}
+                                            className="rounded-full mx-auto border-2 border-primary/30 shadow-lg"
+                                            data-ai-hint="founder portrait professional"
+                                        />
+                                        <h3 className="font-headline text-2xl font-bold mt-4">Velluraju C</h3>
+                                        <p className="text-muted-foreground">Founder of Ryha</p>
+                                    </div>
                                 </div>
                             </div>
                         </CardContent>

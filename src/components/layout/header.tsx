@@ -19,9 +19,6 @@ export function Header() {
             <Link href="/blog" className="hover:text-primary transition-colors" prefetch={false}>Blog</Link>
             <Link href="/#founder" className="hover:text-primary transition-colors" prefetch={false}>Founder</Link>
         </nav>
-        <Button asChild className="hidden md:flex">
-            <Link href="/#products">Get Started</Link>
-        </Button>
       </div>
     </header>
   );

@@ -18,7 +18,7 @@ export const products: Product[] = [
     slug: "ryha-os",
     icon: Cpu,
     title: "Ryha OS — The World’s Smartest Operating System",
-    image: "https://ik.imagekit.io/ps8bybjwy/image%20(1).png?updatedAt=1750843070891",
+    image: "https://ik.imagekit.io/ps8bybjwy/os.png?updatedAt=1750854897698",
     aiHint: "QR code",
     status: "Under Development",
     description: "Ryha OS is a groundbreaking, AI-native operating system designed from first principles to be intelligent, secure, and blazing fast. It eliminates digital friction by automating repetitive tasks, proactively optimizing workflows, and providing a seamless, voice-controlled experience. Built for power users who demand performance without compromise, Ryha OS puts you in complete control of your digital world.",

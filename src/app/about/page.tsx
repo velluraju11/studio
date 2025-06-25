@@ -87,7 +87,7 @@ export default function AboutPage() {
                 <User className="h-10 w-10 text-primary" />
               </div>
               <h1 className="font-headline text-4xl font-black tracking-tighter text-primary sm:text-5xl md:text-6xl">
-                About Me — Velluraju C
+                About Me — Velluraju
               </h1>
               <p className="mt-6 text-lg text-muted-foreground md:text-xl">
                 Founder & Visionary Architect of Ryha, the World's First AI-Native Cyberwarfare Ecosystem. I’m not just building software — I’m engineering an AI-driven revolution. As the World’s No. 1 Hacker Aspirant, I live to break barriers — in code, systems, and thinking. I lead the development of Ryha, a next-generation operating system and AI framework that fuses cybersecurity, automation, and intelligence into a single unified force.

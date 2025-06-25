@@ -24,11 +24,11 @@ export function Hero() {
             </p>
              <blockquote className="mt-6 text-lg italic text-foreground/80">
                 “We don’t build tools. We build digital worlds where machines work for you — intelligently, securely, and forever.”
-                <cite className="mt-2 block text-sm not-italic font-medium text-muted-foreground">— Velluraju C, Founder of Ryha</cite>
+                <cite className="mt-2 block text-sm not-italic font-medium text-muted-foreground">— Velluraju, Founder of Ryha</cite>
               </blockquote>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="/#products">Explore Products</Link>
+                <Link href="/products">Explore Products</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6">
                 <Link href="/mission">Our Mission <ArrowRight className="ml-2"/></Link>

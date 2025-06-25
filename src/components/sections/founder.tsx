@@ -12,17 +12,17 @@ export function Founder() {
           <Glow />
           <Image
             src="https://ik.imagekit.io/ps8bybjwy/Screenshot%202025-06-11%20101654.png?updatedAt=1750819846177"
-            alt="Velluraju C, Founder of Ryha"
+            alt="Velluraju, Founder of Ryha"
             width={120}
             height={120}
             className="mx-auto rounded-full border-2 border-primary/30 object-cover shadow-lg"
           />
           <h2 className="mt-8 bg-gradient-to-br from-primary from-30% to-primary/70 bg-clip-text text-3xl font-bold tracking-tighter text-transparent sm:text-4xl">
-            About the Founder – Velluraju C
+            About the Founder – Velluraju
           </h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-left text-lg text-muted-foreground">
             <p>
-              I’m Velluraju C — the solo architect, student, and world’s number
+              I’m Velluraju — the solo architect, student, and world’s number
               one hacker aspirant behind Ryha.
             </p>
             <p>

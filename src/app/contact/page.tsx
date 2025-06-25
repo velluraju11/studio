@@ -80,7 +80,7 @@ export default function ContactPage() {
                                 <div className="flex justify-center">
                                      <Image 
                                         src="https://ik.imagekit.io/ps8bybjwy/Screenshot%202025-06-11%20101654.png?updatedAt=1750819846177" 
-                                        alt="Velluraju C"
+                                        alt="Velluraju"
                                         width={128}
                                         height={128}
                                         className="rounded-lg object-cover border border-border"
@@ -90,7 +90,7 @@ export default function ContactPage() {
                             <div className="my-6 border-t border-border"></div>
                             <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
                                 <div className="flex-1">
-                                    <p className="font-semibold text-foreground">Velluraju C, <span className="font-normal text-muted-foreground">Founder of Ryha</span></p>
+                                    <p className="font-semibold text-foreground">Velluraju, <span className="font-normal text-muted-foreground">Founder of Ryha</span></p>
                                 </div>
                                 <div className="flex gap-2">
                                     <Button asChild variant="outline" size="icon">

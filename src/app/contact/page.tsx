@@ -173,12 +173,12 @@ export default function ContactPage() {
                                     </AlertDialogHeader>
                                     <div className="flex flex-col items-center justify-center gap-4 py-4">
                                         <div className="w-48 h-48 rounded-lg bg-white p-2">
-                                            <Image src="https://placehold.co/256x256.png" alt="UPI QR Code" width={192} height={192} data-ai-hint="QR code" />
+                                            <Image src="https://ik.imagekit.io/ps8bybjwy/image%20(1).png?updatedAt=1750843070891" alt="UPI QR Code" width={192} height={192} data-ai-hint="QR code" />
                                         </div>
                                         <p className="text-center font-mono text-sm text-muted-foreground">
                                             Or use UPI ID:
                                             <br />
-                                            <span className="font-bold text-foreground">your-upi-id@okhdfcbank</span>
+                                            <span className="font-bold text-foreground">velluraju11@okhdfcbank</span>
                                         </p>
                                     </div>
                                     <AlertDialogFooter>

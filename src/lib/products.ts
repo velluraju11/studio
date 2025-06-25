@@ -51,13 +51,13 @@ export const products: Product[] = [
   {
     slug: "human-pentesting-agent",
     icon: ShieldCheck,
-    title: "Human Pentesting Agent — AI That Hacks Like a Human",
+    title: "Humanized Pentesting Agent — AI That Hacks Like a Human",
     image: "https://images.unsplash.com/photo-1655036387197-566206c80980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjeWJlcnNlY3VyaXR5JTIwc2hpZWxkfGVufDB8fHx8MTc1MDc4Nzc0OHww&ixlib=rb-4.1.0&q=80&w=1080",
     aiHint: "cybersecurity shield",
     status: "Planned",
-    description: "The Human Pentesting Agent is a revolutionary cybersecurity tool that leverages AI to think and act like a world-class ethical hacker. It autonomously probes systems, discovers vulnerabilities, and exploits them in a secure, sandboxed environment. Capable of running thousands of tools and generating comprehensive reports with video evidence, it's the ultimate force multiplier for security teams.",
+    description: "The Humanized Pentesting Agent is a revolutionary cybersecurity tool that leverages AI to think and act like a world-class ethical hacker. It autonomously probes systems, discovers vulnerabilities, and exploits them in a secure, sandboxed environment. Capable of running thousands of tools and generating comprehensive reports with video evidence, it's the ultimate force multiplier for security teams.",
     features: [
-      "AI that simulates human pentesting.",
+      "AI that simulates humanized pentesting.",
       "1000+ tools in a sandboxed environment.",
       "Detects vulnerabilities 100x faster than humans.",
       "Generates full reports with recordings.",

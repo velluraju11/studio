@@ -31,7 +31,7 @@ export function Founder() {
             </p>
             <p>
               Everything Ryha is today — from the bootloader of Ryha OS to the
-              brain of Ryha AI, to the core of the Human Pentesting Agent — was
+              brain of Ryha AI, to the core of the Humanized Pentesting Agent — was
               designed, developed, and optimized by me alone: line by line,
               system by system. No shortcuts. No compromises.
             </p>
@@ -63,7 +63,7 @@ export function Founder() {
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
                     <span>
                       <span className="font-semibold text-foreground">
-                        Human Pentesting Agent
+                        Humanized Pentesting Agent
                       </span>{' '}
                       — a fully autonomous ethical hacker that works like a
                       human, but 100x faster

@@ -58,7 +58,7 @@ export default function ContactPage() {
                             <CardDescription>You can also reach out to us directly.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-[1fr,auto] items-center gap-8">
+                            <div className="grid grid-cols-[1fr,auto] items-center gap-x-8 gap-y-6">
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-4">
                                         <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
@@ -77,7 +77,15 @@ export default function ContactPage() {
                                         <span className="text-foreground">Tirunelveli, Tamil Nadu, India</span>
                                     </div>
                                 </div>
-                                <div className="h-32 w-32 rounded-lg bg-muted border border-border" data-ai-hint="profile picture"></div>
+                                <div className="flex justify-center">
+                                     <Image 
+                                        src="https://ik.imagekit.io/ps8bybjwy/Screenshot%202025-06-11%20101654.png?updatedAt=1750819846177" 
+                                        alt="Velluraju C"
+                                        width={128}
+                                        height={128}
+                                        className="rounded-lg object-cover border border-border"
+                                    />
+                                </div>
                             </div>
                             <div className="my-6 border-t border-border"></div>
                             <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
